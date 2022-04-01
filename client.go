@@ -53,7 +53,7 @@ func printBookDetails(bookName string) (string, error) {
 
 // Try your hands at making your own custom functions. Below are a few function suggestions
 // ProTip: Running new functions in debug mode makes it easier to see what happens at each line of code.
-// 		   Refer to the quick start on how to run your functions in debug mode with VS Code.
+// 		   Refer to the quick start in the ProTip on how to run your functions in debug mode with VS Code.
 
 // Create a function that list all books and prints out each book's author
 func printEachBooksAuthor() {

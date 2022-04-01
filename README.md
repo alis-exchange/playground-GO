@@ -10,7 +10,7 @@ We have preconfigured the development environment for you to easily make your fi
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `playground-GO` directory.
 
-If executing this example on Gitpod, run the following command from the terminal:
+If executing this example on Gitpod, run the following command from the terminal if you are not in the `playground-GO` directory:
 
 ```bash
 $ cd playground-GO
