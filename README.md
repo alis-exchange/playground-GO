@@ -16,7 +16,13 @@ If executing this example on Gitpod, run the following command from the terminal
 $ cd playground-GO
 ```
 
-2. Run the code by running the terminal command:
+2. Clear the terminal by running:
+
+```bash
+clear
+```
+
+3. Run the code by running the terminal command:
 
 ```bash
 $ go run *.go
