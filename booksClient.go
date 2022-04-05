@@ -34,8 +34,8 @@ func printBookNames() (string, error) {
 		return "", fmt.Errorf("could not list books: %v", err)
 	}
 	// Print the list of books from the response
-	for _, book := range allBooks.Books {
-		fmt.Printf("%s\n", book.DisplayName)
+	for _, book := range allBooks.GetBooks() {
+		fmt.Printf("%s\n", book.GetDisplayName())
 	}
 
 	// Print function result on new line
