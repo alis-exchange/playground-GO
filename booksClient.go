@@ -38,6 +38,7 @@ func printBookNames() (string, error) {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
 
+	// Print function result on new line
 	fmt.Println("\n")
 
 	return "Done!", nil
@@ -57,6 +58,7 @@ func printBookDetails(bookName string) (string, error) {
 	// Print the book details
 	fmt.Printf("%s\n", book)
 
+	// Print function result on new line
 	fmt.Println("\n")
 
 	return "Done!", nil
@@ -72,6 +74,7 @@ func printEachBooksAuthor() (string, error) {
 
 	// Print the first author of each book from the response
 
+	// Print function result on new line
 	fmt.Println("\n")
 
 	return "Done!", nil
@@ -86,6 +89,7 @@ func printBookDetailsInSentence() (string, error) {
 	// Print the book details in a sentence structured,
 	// "The book <book name> is written by <author name> and published by <publisher name>"
 
+	// Print function result on new line
 	fmt.Println("\n")
 
 	return "Done!", nil
@@ -100,6 +104,7 @@ func printEachBooksDetails() (string, error) {
 
 	// Print the book details
 
+	// Print function result on new line
 	fmt.Println("\n")
 
 	return "Done!", nil
