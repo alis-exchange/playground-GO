@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package foo.br.resources.books.v1;
+
+import "google/protobuf/empty.proto";
+import "google/api/resource.proto";
+import "google/api/field_behavior.proto";
+import "google/api/client.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/field_mask.proto";
+import "google/type/date.proto";
+
+option go_package = "go.protobuf.foo.alis.exchange/foo/br/resources/books/v1";
+
+// Book service for foo.br.
+service BooksService {
+	// List books.
+	// Features are listed in Descending order.
+	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
+		option (google.api.http) = {
+			get: "/resources/store/v1/books"
+		};
+	}
+
+	// Get a book.
+	rpc GetBook(GetBookRequest) returns (Book) {
+		option (google.api.http) = {
+			get: "/resources/store/v1/{name=books/*}"
+		};
+		option (google.api.method_signature) = "name";
+	}
+	
+}
+
+//A book resource
+message Book {
+
+	//Name of the book in the format: books/{book}.
+	string name = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+	//The display name of the book.
+	string display_name = 2 [(google.api.field_behavior) = REQUIRED];
+
+	//The authors of the book.
+	repeated string authors = 3 [(google.api.field_behavior) = REQUIRED];
+
+	//The publisher of the book
+	string publisher = 4 [(google.api.field_behavior) = REQUIRED];
+}
+
+// Request message for [foo.br.resources.books.v1.Service.ListBooks].
+message ListBooksRequest {
+	// The maximum number of books to return. The service may return fewer than
+	// this value.
+	// If unspecified, at most 100 books will be returned.
+	// The maximum value is 1000; values above 1000 will be coerced to 1000.
+	int32 page_size = 1 [(google.api.field_behavior) = OPTIONAL];
+}
+
+message ListBooksResponse {
+	// The books
+	repeated Book books = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+// Request message for [foo.br.resources.books.v1.Service.GetBook].
+message GetBookRequest {
+	// The book name is the unique identifier across organisations.
+	// Format: books/{book}
+	string name = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
