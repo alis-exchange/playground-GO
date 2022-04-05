@@ -11,24 +11,19 @@ import (
 func main() {
 
 	// Call the printBookNames function
-	result, err := printBookNames()
-	fmt.Println(result, err)
+	printBookNames()
 
 	// Call the printBookDetails function
-	result, err = printBookDetails("books/c4a2")
-	// fmt.Println(result, err)
+	printBookDetails("books/c4a2")
 
 	// Call the printEachBooksAuthor function
-	result, err = printEachBooksAuthor()
-	// fmt.Println(result, err)
+	printEachBooksAuthor()
 
 	// Call the printBookDetailsInSentence function
-	result, err = printBookDetailsInSentence()
-	// fmt.Println(result, err)
+	printBookDetailsInSentence()
 
 	// Call the printEachBooksDetails function
-	result, err = printEachBooksDetails()
-	// fmt.Println(result, err)
+	printEachBooksDetails()
 }
 
 // function makes a call to the books service to get a list of books
@@ -42,6 +37,8 @@ func printBookNames() (string, error) {
 	for _, book := range allBooks.Books {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
+
+	fmt.Println("\n")
 
 	return "Done!", nil
 }
@@ -60,6 +57,8 @@ func printBookDetails(bookName string) (string, error) {
 	// Print the book details
 	fmt.Printf("%s\n", book)
 
+	fmt.Println("\n")
+
 	return "Done!", nil
 }
 
@@ -73,6 +72,8 @@ func printEachBooksAuthor() (string, error) {
 
 	// Print the first author of each book from the response
 
+	fmt.Println("\n")
+
 	return "Done!", nil
 }
 
@@ -85,6 +86,8 @@ func printBookDetailsInSentence() (string, error) {
 	// Print the book details in a sentence structured,
 	// "The book <book name> is written by <author name> and published by <publisher name>"
 
+	fmt.Println("\n")
+
 	return "Done!", nil
 
 }
@@ -96,6 +99,8 @@ func printEachBooksDetails() (string, error) {
 	// For each book in the response, call the GetBook method on the client library
 
 	// Print the book details
+
+	fmt.Println("\n")
 
 	return "Done!", nil
 }
