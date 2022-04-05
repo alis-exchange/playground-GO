@@ -13,13 +13,13 @@ We have preconfigured the development environment for you to easily make your fi
 If executing this example on Gitpod, run the following command from the terminal if you are not in the `playground-GO` directory:
 
 ```bash
-$ cd playground-GO
+$ cd workspace/playground-GO
 ```
 
 2. Clear the terminal by running:
 
 ```bash
-clear
+$ clear
 ```
 
 3. Run the code by running the terminal command:

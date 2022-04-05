@@ -16,7 +16,19 @@ func main() {
 
 	// Call the printBookDetails function
 	result, err = printBookDetails("books/c4a2")
-	fmt.Println(result, err)
+	// fmt.Println(result, err)
+
+	// Call the printEachBooksAuthor function
+	result, err = printEachBooksAuthor()
+	// fmt.Println(result, err)
+
+	// Call the printBookDetailsInSentence function
+	result, err = printBookDetailsInSentence()
+	// fmt.Println(result, err)
+
+	// Call the printEachBooksDetails function
+	result, err = printEachBooksDetails()
+	// fmt.Println(result, err)
 }
 
 // function makes a call to the books service to get a list of books
@@ -56,14 +68,34 @@ func printBookDetails(bookName string) (string, error) {
 // 		   Refer to the quick start in the ProTip on how to run your functions in debug mode with VS Code.
 
 // Create a function that list all books and prints out each book's author
-func printEachBooksAuthor() {
+func printEachBooksAuthor() (string, error) {
+	// Call the ListBooks method on the client library
+
+	// Print the first author of each book from the response
+
+	return "Done!", nil
 }
 
-// Create a function that gets a book and wrangles the response to print out in a sentence structured as "The book <book name> is written by <author name> and published by <publisher name>"
-func printBookDetailsInSentence() {
+// Create a function that gets a book
+//and wrangles the response to print out in a sentence structured as
+// "The book <book name> is written by <author name> and published by <publisher name>"
+func printBookDetailsInSentence() (string, error) {
+	// Call the GetBook method on the client library
+
+	// Print the book details in a sentence structured,
+	// "The book <book name> is written by <author name> and published by <publisher name>"
+
+	return "Done!", nil
 
 }
 
 // Create a function that list all books and uses the list of books to make calls to the books service to get each book's details
-func printEachBooksDetails() {
+func printEachBooksDetails() (string, error) {
+	// Call the ListBooks method on the client library
+
+	// For each book in the response, call the GetBook method on the client library
+
+	// Print the book details
+
+	return "Done!", nil
 }
